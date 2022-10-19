@@ -4,12 +4,20 @@ import { useEffect, useState } from 'react';
   // Here is myr key: 28a35669
   const API_URL = "http://www.omdbapi.com?apikey=28a35669";
 
+  const movieDetails = {
+    "Title": "Italian Spiderman",
+    "Year": "2007",
+    "imdbID": "tt2705436",
+    "Type": "movie",
+    "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+}
+
+
+
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-
-
 
 const searchMovie = (title) => {
   fetch(`${API_URL}&s=${title}`)
@@ -36,7 +44,6 @@ useEffect(() => {
   searchMovie("Spiderman");
 
 }, []);
-
 
 //get static movi data
   return (

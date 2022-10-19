@@ -1,19 +1,21 @@
 import React from 'react'
 
-function MoviCard(props) {
+const MoviCard = (props) => {
+    console.log(props.movie)
+    console.log("hi", props)
   return (
-    <div className="movie" key={props.imdbID}>
+    <div className="movie" key={props.movie.imdbID}>
     <div>
-      <p>{props.Year}</p>
+      <p>{props.movie.Year}</p>
     </div>
 
     <div>
-      <img src={props.Poster !== "N/A" ? props.Poster : "https://via.placeholder.com/400"} alt={props.Title} />
+      <img src={props.movie.Poster !== "N/A" ? props.movie.Poster : "https://via.placeholder.com/400"} alt={props.movie.Title} />
     </div>
 
     <div>
-      <span>{props.Type}</span>
-      <h3>{props.Title}</h3>
+      <span>{props.movie.Type}</span>
+      <h3>{props.movie.Title}</h3>
     </div>
   </div>
 
