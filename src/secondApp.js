@@ -38,11 +38,41 @@ useEffect(() => {
 }, []);
 
 
-
+//get static movi data
   return (
     <div className="App">
-      <h1>React App</h1>
-    </div>
+    <h1>MovieLand</h1>
+
+    <div className='search'>
+      <input
+      placeholder="Search for movies"
+      type="text"
+      // value={}
+      onChange={() => {
+
+      }}
+
+      />
+      <img 
+      src={SearchIcon}
+      alt="search"
+      onClick={() => {
+
+      }}
+      />
+    </div> 
+
+    <div className='container'>
+      <div className='movie'>
+        <p>{movieDetails.Title}</p>
+        <p>{movieDetails.Year}</p>
+        <span>{movieDetails.Type}</span>
+        <img  src={movieDetails.Poster !== 'N/A' ? movieDetails.Poster : 'https://via.placeholder.com/400'} alt={movieDetails.Title}/>
+      </div> 
+    </div> 
+
+
+  </div> 
   );
 }
 

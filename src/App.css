@@ -5,6 +5,10 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+  color: #f9d3b4;
+}
+span {
+  color: #f9d3b4;
 }
 
 :root {
@@ -27,6 +31,8 @@ body {
 }
 
 h1 {
+  text-align: center;
+  margin: auto;
   font-size: 3rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
@@ -107,7 +113,7 @@ h1 {
 .container {
   width: 100%;
   margin-top: 3rem;
-
+  color: #f9d3b4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +124,7 @@ h1 {
   width: 310px;
   height: 460px;
   margin: 1.5rem;
-
+  color: #f9d3b4;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -218,6 +224,9 @@ h1 {
 
   h1 {
     font-size: 2rem;
+    /* text-align: center;
+    margin: auto; */
+    margin: 0;
   }
 
   .container {
