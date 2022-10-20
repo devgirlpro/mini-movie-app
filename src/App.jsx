@@ -46,7 +46,6 @@ useEffect(() => {
         }}
         />
         <img 
-        
         src={SearchIcon}
         alt="search"
         onClick={() => {searchMovie(searchTherm)
