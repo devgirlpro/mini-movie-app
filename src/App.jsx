@@ -17,6 +17,7 @@ import MoviCard from './MoviCard';
 
 const App = () => {
   const [movies, setMovies] = useState([])
+  const [searchTherm, setSearchTherm] = useState('')
 
 const searchMovie = async (title) => {
   const response = await fetch(`${API_URL}&s=${title}`);
@@ -29,7 +30,7 @@ const searchMovie = async (title) => {
 }
 
 useEffect(() => {
-  searchMovie('murder')
+  searchMovie()
 }, []);
 
   return (
@@ -40,14 +41,15 @@ useEffect(() => {
         <input
         placeholder="Search for movies"
         type="text"
-        // value={}
-        onChange={() => {
+        value={searchTherm}
+        onChange={(e) => {setSearchTherm(e.target.value)
         }}
         />
         <img 
+        
         src={SearchIcon}
         alt="search"
-        onClick={() => {
+        onClick={() => {searchMovie(searchTherm)
         }}
         />
       </div> 
